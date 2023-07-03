@@ -1,0 +1,794 @@
+/*
+Theme Name: THEME_NAME
+Theme URI: http://wordpress.org/themes/THEME_NAME
+Author: Marco Biedermann
+Author URI: https://www.marcobiedermann.com/
+Description: The 2013 theme for WordPress takes us back to the blog, featuring a full range of post formats, each displayed beautifully in their own unique way. Design details abound, starting with a vibrant color scheme and matching header images, beautiful typography and icons, and a flexible layout that looks great on any device, big or small.
+Version: 1.0.0
+License: ISC
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
+Text Domain: THEME_NAME
+*/
+
+.alignleft {
+	float: left;
+	margin-right: 1rem;
+}
+
+.alignright {
+	float: right;
+	margin-left: 1rem;
+}
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignnone {
+	max-width: 100%;
+}
+
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	width: 1px;
+}
+
+.grid {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1170px;
+	width: 90%;
+}
+
+.grid-row {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin: -1.5%;
+}
+
+.grid-col {
+	-webkit-box-flex: 1;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+	margin: 1.5%;
+}
+
+.grid-col-3 {
+	-ms-flex-preferred-size: 22%;
+	flex-basis: 22%;
+}
+
+.grid-col-4 {
+	-ms-flex-preferred-size: 30.33333%;
+	flex-basis: 30.33333%;
+}
+
+.grid-col-8 {
+	-ms-flex-preferred-size: 63.66667%;
+	flex-basis: 63.66667%;
+}
+
+.grid-col-9 {
+	-ms-flex-preferred-size: 72%;
+	flex-basis: 72%;
+}
+
+*,
+*::before,
+*::after {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+html {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	font-size: 100%;
+	height: 100%;
+	text-rendering: optimizeLegibility;
+	-webkit-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+}
+
+body {
+	font-family: roboto, sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	margin: 0;
+	min-height: 100%;
+}
+
+.container {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.footer {
+	background-color: #3e9487;
+	color: #fafafa;
+	padding-bottom: 1rem;
+	padding-top: 1rem;
+}
+
+.footer a {
+	color: #fafafa;
+}
+
+.footer .grid {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+.header {
+	background-color: #3e9487;
+	color: #fafafa;
+	padding-bottom: 1rem;
+	padding-top: 1rem;
+}
+
+.header a {
+	color: #fafafa;
+}
+
+.header .grid {
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+.main {
+	-webkit-box-flex: 1;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+}
+
+.sidebar-left {
+	margin-right: 3%;
+	-webkit-box-ordinal-group: 0;
+	-ms-flex-order: -1;
+	order: -1;
+}
+
+.sidebar-right {
+	margin-left: 3%;
+}
+
+.sidebar {
+	-ms-flex-preferred-size: 23.5%;
+	flex-basis: 23.5%;
+	-ms-flex-negative: 0;
+	flex-shrink: 0;
+}
+
+a {
+	background-color: transparent;
+	border: 0;
+	color: #3e9487;
+	outline: 0;
+	text-decoration: none;
+	-webkit-transition: background-color 0.3s, color 0.3s;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+a:focus,
+a:hover {
+	color: #2f7066;
+}
+
+blockquote {
+	border-left: 3px solid #222;
+	margin: 0;
+}
+
+blockquote p {
+	font-style: italic;
+}
+
+code {
+	font-family: "Courier New", monospace;
+	font-size: 0.75em;
+}
+
+pre {
+	background-color: #f5f5f5;
+	display: block;
+	margin-bottom: 1.5rem;
+	margin-top: 0;
+	overflow: auto;
+	padding: 1rem;
+	-moz-tab-size: 2;
+	-o-tab-size: 2;
+	tab-size: 2;
+	word-break: break-all;
+}
+
+.comments-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.comment {
+}
+
+.comment.even {
+}
+
+.comment.odd {
+}
+
+.comment-respond {
+}
+
+.comment-form {
+}
+
+.comment-formtextarea {
+	padding: 0.25rem 0.5rem;
+}
+
+.comment-form .submit {
+	padding: 0.25rem 1rem;
+}
+
+.comment-author {
+}
+
+.comment-meta {
+}
+
+embed,
+iframe {
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+input,
+select,
+textarea {
+	background-color: #e8e8e8;
+	border: 1px solid #ccc;
+	border-radius: 0;
+	color: inherit;
+	font: inherit;
+	margin: 0;
+	padding: 0;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="file"],
+input[type="month"],
+input[type="number"],
+input[type="output"],
+input[type="password"],
+input[type="range"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+select,
+textarea {
+	padding: 0.25rem 0.5rem;
+	width: 100%;
+}
+
+input[type="submit"] {
+	background-color: #3e9487;
+	color: #fff;
+	padding: 0.25rem 1rem;
+}
+
+.gallery {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+.gallery-item {
+	-webkit-box-flex: 1;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+	position: relative;
+	overflow: hidden;
+}
+
+.gallery-item img {
+	width: 100%;
+}
+
+.gallery-item:hover .gallery-caption {
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+}
+
+.gallery-columns-2 {
+}
+
+.gallery-columns-2 .gallery-item {
+	-ms-flex-preferred-size: 50%;
+	flex-basis: 50%;
+}
+
+.gallery-columns-3 {
+}
+
+.gallery-columns-3 .gallery-item {
+	-ms-flex-preferred-size: 33.33333%;
+	flex-basis: 33.33333%;
+}
+
+.gallery-columns-4 {
+}
+
+.gallery-columns-4 .gallery-item {
+	-ms-flex-preferred-size: 25%;
+	flex-basis: 25%;
+}
+
+.gallery-columns-5 {
+}
+
+.gallery-columns-5 .gallery-item {
+	-ms-flex-preferred-size: 20%;
+	flex-basis: 20%;
+}
+
+.gallery-columns-6 {
+}
+
+.gallery-columns-6 .gallery-item {
+	-ms-flex-preferred-size: 16.66667%;
+	flex-basis: 16.66667%;
+}
+
+.gallery-columns-7 {
+}
+
+.gallery-columns-7 .gallery-item {
+	-ms-flex-preferred-size: 14.28571%;
+	flex-basis: 14.28571%;
+}
+
+.gallery-columns-8 {
+}
+
+.gallery-columns-8 .gallery-item {
+	-ms-flex-preferred-size: 12.5%;
+	flex-basis: 12.5%;
+}
+
+.gallery-columns-9 {
+}
+
+.gallery-columns-9 .gallery-item {
+	-ms-flex-preferred-size: 11.11111%;
+	flex-basis: 11.11111%;
+}
+
+.gallery-caption {
+	background-color: rgba(#000, 0.8);
+	bottom: 0;
+	color: #fff;
+	font-size: 0.75rem;
+	left: 0;
+	padding: 0.25rem 0.5rem;
+	position: absolute;
+	-webkit-transform: translateY(100%);
+	transform: translateY(100%);
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+	transition: transform 0.3s, -webkit-transform 0.3s;
+	width: 100%;
+}
+
+figure {
+	margin: 0;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+ol,
+ul {
+	margin-bottom: 1.5rem;
+	margin-top: 0;
+	padding-left: 1.25rem;
+}
+
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+	margin-bottom: 0.5rem;
+}
+
+.menu {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	list-style: none;
+	margin: -0.5rem;
+	padding: 0;
+}
+
+.menu .menu-item {
+	margin: 0.5rem;
+}
+
+.menu .page_item_has_children {
+	position: relative;
+}
+
+.menu .page_item_has_children:hover > .children {
+	display: block;
+}
+
+.menu .children {
+	display: none;
+	position: absolute;
+}
+
+.pagination .nav-links {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+.pagination .page-numbers {
+	display: inline-block;
+	padding: 0.25rem 0.5rem;
+}
+
+.pagination .page-numbers.current {
+	font-weight: 700;
+}
+
+.posts {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	list-style: none;
+	margin: -1.5rem;
+	margin: 0;
+	padding: 0;
+}
+
+.posts > li {
+	-webkit-box-flex: 1;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+	margin: 1.5rem;
+}
+
+.post {
+	-webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
+.post header {
+	padding: 1.5%;
+}
+
+.post main {
+	-webkit-box-flex: 1;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+}
+
+.post footer {
+	padding: 1.5%;
+}
+
+.post-content {
+	padding: 1.5%;
+}
+
+.post .title {
+}
+
+.post .info {
+}
+
+.post-edit-link {
+}
+
+.post-categories {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	font-size: 0.875rem;
+	list-style: none;
+	margin: -0.5rem;
+	padding: 0;
+}
+
+.post-categories li {
+	margin: 0.5rem;
+}
+
+.post-tags {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	font-size: 0.875rem;
+	list-style: none;
+	margin: -0.5rem;
+	padding: 0;
+}
+
+.post-tags li {
+	margin: 0.5rem;
+}
+
+.wp-caption {
+	max-width: 100%;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin-bottom: 1.5rem;
+	width: 100%;
+}
+
+th,
+td {
+	text-align: left;
+}
+
+b,
+strong {
+	font-weight: bolder;
+}
+
+p {
+	margin-bottom: 1.5rem;
+	margin-top: 0;
+}
+
+small {
+	font-size: 80%;
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}
+
+.widget {
+	margin-bottom: 2rem;
+}
+
+.widget select {
+	padding: 0.25rem 0.5rem;
+	width: 100%;
+}
+
+.widget-title {
+}
+
+.widget_archive {
+}
+
+.widget_calendar {
+}
+
+.widget_calendar table {
+}
+
+.widget_calendar caption {
+}
+
+.widget_calendar thead {
+}
+
+.widget_calendar tfoot {
+}
+
+.widget_calendar tbody {
+}
+
+.widget_calendar tr {
+}
+
+.widget_calendar th {
+}
+
+.widget_calendar td {
+}
+
+.widget_calendar a {
+}
+
+.widget_calendar .pad {
+}
+
+.widget_calendar #calendar_wrap {
+}
+
+.widget_calendar #prev {
+}
+
+.widget_calendar #next {
+}
+
+.widget_categories {
+}
+
+.widget_categories .postform {
+}
+
+.recentcomments {
+}
+
+.widget_meta {
+}
+
+.widget_meta ul {
+}
+
+.widget_meta li {
+}
+
+.widget_meta a {
+}
+
+.widget_pages {
+}
+
+.widget_pages ul {
+}
+
+.widget_pages li {
+}
+
+.widget_pages .page_item {
+}
+
+.widget_pages .page_item_has_children {
+}
+
+.widget_pages .children {
+}
+
+.widget_recent_comments {
+}
+
+.widget_recent_comments ul {
+}
+
+.widget_recent_comments li {
+}
+
+.widget_recent_comments a {
+}
+
+.widget_recent_comments .post-date {
+}
+
+.widget_recent_comments .recentcomments {
+}
+
+.widget_recent_comments .url {
+}
+
+.widget_recent_comments #recentcomments {
+}
+
+.widget_recent_entries {
+}
+
+.widget_recent_entries ul {
+}
+
+.widget_recent_entries li {
+}
+
+.widget_recent_entries a {
+}
+
+.widget_recent_entries .post-date {
+}
+
+.widget_search {
+}
+
+.search-form {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.search-form label {
+	-webkit-box-flex: 1;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+}
+
+.search-form .search-reader-text {
+}
+
+.search-form .search-field {
+}
+
+.search-form .search-submit {
+}
+
+.widget_tag_cloud {
+}
+
+.widget_tag_cloud .tagcloud {
+}
+
+.widget_tag_cloud a {
+}
+
+.widget_text {
+}
+
+.widget_text .textwidget {
+}
